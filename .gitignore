@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Secrets — never commit
+.env
+
+# Large data (GTFS, OSM, graphs) — downloaded by scripts, not stored in git
+data/
+
+# macOS / editors
+.DS_Store
+.vscode/
