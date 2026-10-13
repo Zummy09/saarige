@@ -20,4 +20,9 @@ In my own words. One entry per session.
 **Setup**
 - requirements.txt without pinned versions does not stop version drift. uv.lock pins every package, including hidden (transitive) ones.
 
+- .env and .venv must never be committed: .env leaks API keys (stays in git history forever, so rotate the key), .venv is large and only works on my machine.
+
+**Config and secrets**
+- On my laptop the API key comes from the .env file. On a server it comes from an environment variable, which Docker or AWS sets when the container starts. If it's missing, the app crashes at startup, which is good because we find out before users do.
+
 _(Add a few lines of your own here.)_

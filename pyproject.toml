@@ -5,6 +5,7 @@ description = "Agentic commute planner for Bengaluru (metro + BMTC + auto)"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "polars>=1.44,<2",
     "pydantic>=2.14.1",
     "pydantic-settings>=2.15.0",
 ]
